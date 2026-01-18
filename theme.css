@@ -1,34 +1,1270 @@
+/* ═══════════════════════════════════════════════════════════════════════════
+ *
+ S HINKAWA THEME FOR OBSIDIAN                                                   *
+ Black, White & Gold | Pointillism Aesthetic
+
+ Author: You
+ Version: 1.0
+ Last Updated: 2025
+
+ ═══════════════════════════════════════════════════════════════════════════
+
+ TABLE OF CONTENTS
+ ─────────────────
+ 1.  Font Imports & Options
+ 2.  Color Palette - Light Mode
+ 3.  Color Palette - Dark Mode
+ 4.  Typography
+ 5.  Gold Elements
+ 5.1  Tags
+ 5.2  Links
+ 5.3  Active File & Tab
+ 5.4  Checkboxes
+ 5.5  Search Highlights
+ 5.6  Graph View
+ 5.7  Cursor / Caret
+ 5.8  List Bullets
+ 6.  Markdown Formatting (Future Gold Options)
+ 7.  Images
+ 8.  Horizontal Rules
+ 9.  Code Blocks
+ 10. Blockquotes
+ 11. Tables
+ 12. Scrollbars
+ 13. Spacing
+ 14. UI Elements
+
+ ═══════════════════════════════════════════════════════════════════════════ */
+
+
+/* ═══════════════════════════════════════════════════════════════════════════
+ 1 . FONT IMPORTS & OPTIONS                                                     *
+
+ Current: Wittgenstein (body) + JetBrains Mono (code)
+
+ TO EXPERIMENT: Comment out current @import, uncomment another
+ ═══════════════════════════════════════════════════════════════════════════ */
+
+/* --- CURRENT FONTS --- */
+/*  @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+/* Wittgenstein - Load via Obsidian or system if available */
+/* If not installed, falls back to Georgia */
+
+
+/* --- ALTERNATIVE FONT OPTIONS --- */
+/* Uncomment ONE @import to try different fonts */
+
+/* OPTION A: Japanese-influenced, dramatic headers */
+/* @import url('https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700&family=Spectral:wght@400;500;600&display=swap'); */
+
+/* OPTION B: Elegant, classic book feel */
+/* @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Crimson+Pro:wght@400;500;600&display=swap'); */
+
+/* OPTION C: Modern, sharp editorial */
+/* @import url('https://fonts.googleapis.com/css2?family=Newsreader:wght@400;500;600;700&family=Spectral:wght@400;500;600&display=swap'); */
+
+/* OPTION D: Clean sans-serif */
+/* @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap'); */
+
+/* OPTION E: Monospace everything (hacker aesthetic) */
+/* @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&display=swap'); */
+
+/* --- ALTERNATIVE MONOSPACE OPTIONS --- */
+/* Change --font-mono variable below to use these */
+
+/* Space Mono - Industrial, retro */
+/* @import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap'); */
+
+/* IBM Plex Mono - Technical, clean */
+/* @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&display=swap'); */
+
+/* Fira Code - Popular, great ligatures */
+/* @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&display=swap'); */
+
+
+/* ═══════════════════════════════════════════════════════════════════════════
+ 2 . COLOR PALETTE - LIGHT MODE                                                 *
+ ═══════════════════════════════════════════════════════════════════════════ */
+
+.theme-light {
+    /* ─────────────────────────────────────
+     B ACKGROUNDS                                                               *
+     ───────────────────────────────────── */
+    --background-primary:         #FFFFFF;
+    --background-secondary:       #F5F5F5;
+    --background-primary-alt:     #FAFAFA;
+    --background-secondary-alt:   #EBEBEB;
+    --background-modifier-border: #DDDDDD;
+    --background-modifier-form-field: #F5F5F5;
+    --background-modifier-form-field-highlighted: #EBEBEB;
+    --background-modifier-box-shadow: rgba(0, 0, 0, 0.1);
+    --background-modifier-success: #E6DFA9;
+    --background-modifier-error: #5C0000;
+    --background-modifier-error-rgb: 92, 0, 0;
+    --background-modifier-error-hover: #7A0000;
+    --background-modifier-cover: rgba(0, 0, 0, 0.6);
+
+    /* ─────────────────────────────────────
+     T EXT                                                                      *
+     ───────────────────────────────────── */
+    --text-normal:       #333333;
+    --text-muted:        #666666;
+    --text-faint:        #999999;
+    --text-on-accent:    #000000;
+    --text-error:        #5C0000;
+    --text-error-hover:  #7A0000;
+    --text-accent:       #000000;
+    --text-accent-hover: #333333;
+
+    /* ─────────────────────────────────────
+     G OLD PALETTE                                                              *
+     Your signature accent color
+     ───────────────────────────────────── */
+    --gold-highlight: #E6DFA9;
+    --gold-main:      #ffde6e;
+    --gold-shadow:    #8A7129;
+
+    /* ─────────────────────────────────────
+     I NTERACTIVE ELEMENTS                                                      *
+     Maps to gold for accent color
+     ───────────────────────────────────── */
+    --interactive-accent:       var(--gold-main);
+    --interactive-accent-rgb:   255, 222, 110;
+    --interactive-accent-hover: var(--gold-highlight);
+
+    /* ─────────────────────────────────────
+     S ELECTION & HIGHLIGHTS                                                    *
+     ───────────────────────────────────── */
+    --text-selection:             rgba(0, 0, 0, 0.15);
+    --text-highlight-bg:          rgba(255, 222, 110, 0.3);
+    --text-highlight-bg-active:   rgba(255, 222, 110, 0.5);
+
+    /* ─────────────────────────────────────
+     U I ELEMENTS                                                               *
+     ───────────────────────────────────── */
+    --scrollbar-bg:               #F5F5F5;
+    --scrollbar-thumb-bg:         #CCCCCC;
+    --scrollbar-active-thumb-bg:  #999999;
+
+    --icon-color:          #333333;
+    --icon-color-hover:    #000000;
+    --icon-color-focused:  var(--gold-main);
+
+    --nav-item-color:             #333333;
+    --nav-item-color-hover:       #000000;
+    --nav-item-color-active:      var(--gold-main);
+    --nav-item-background-hover:  #F5F5F5;
+    --nav-item-background-active: #EBEBEB;
+
+    /* ─────────────────────────────────────
+     G RAPH VIEW                                                                *
+     ───────────────────────────────────── */
+    --graph-line:            #DDDDDD;
+    --graph-node:            #333333;
+    --graph-node-focused:    var(--gold-main);
+    --graph-node-tag:        var(--gold-shadow);
+    --graph-node-attachment: #666666;
+
+    /* ─────────────────────────────────────
+     T YPOGRAPHY                                                                *
+
+     TO EXPERIMENT:
+     Change these values to try different fonts
+     Make sure to uncomment matching @import above
+     ───────────────────────────────────── */
+
+    /* CURRENT: Wittgenstein + Georgia fallback */
+    --font-text-theme:      "Wittgenstein", "Georgia", serif;
+    --font-heading-theme:   "Wittgenstein", "Georgia", serif;
+    --font-monospace-theme: "JetBrains Mono", "Fira Code", monospace;
+    --font-interface-theme: "Wittgenstein", system-ui, sans-serif;
+
+    /* OPTION A: Japanese-influenced */
+    /* --font-heading-theme: "Shippori Mincho", "Georgia", serif; */
+    /* --font-text-theme:    "Spectral", "Georgia", serif; */
+
+    /* OPTION B: Elegant classic */
+    /* --font-heading-theme: "Cormorant Garamond", "Georgia", serif; */
+    /* --font-text-theme:    "Crimson Pro", "Georgia", serif; */
+
+    /* OPTION C: Modern editorial */
+    /* --font-heading-theme: "Newsreader", "Georgia", serif; */
+    /* --font-text-theme:    "Spectral", "Georgia", serif; */
+
+    /* OPTION D: Clean sans-serif */
+    /* --font-heading-theme: "Inter", system-ui, sans-serif; */
+    /* --font-text-theme:    "Inter", system-ui, sans-serif; */
+
+    /* OPTION E: All monospace */
+    /* --font-heading-theme: "JetBrains Mono", monospace; */
+    /* --font-text-theme:    "JetBrains Mono", monospace; */
+
+    /* Alternative monospace fonts */
+    /* --font-monospace-theme: "Space Mono", monospace; */
+    /* --font-monospace-theme: "IBM Plex Mono", monospace; */
+    /* --font-monospace-theme: "Fira Code", monospace; */
+
+    /* ─────────────────────────────────────
+     F ONT SIZES & SPACING                                                      *
+     ───────────────────────────────────── */
+    --font-text-size:      18px;
+    --line-height:         1.7;
+    --font-heading-weight: 600;
+    --letter-spacing-headings: -0.02em;
+}
+
+
+/* ═══════════════════════════════════════════════════════════════════════════
+ 3 . COLOR PALETTE - DARK MODE (AMOLED BLACK)                                   *
+ ═══════════════════════════════════════════════════════════════════════════ */
+
+.theme-dark {
+    /* ─────────────────────────────────────
+     B ACKGROUNDS - TRUE BLACK                                                  *
+     ───────────────────────────────────── */
+    --background-primary:         #000000;
+    --background-secondary:       #000000;
+    --background-primary-alt:     #050505;
+    --background-secondary-alt:   #111111;
+    --background-modifier-border: #222222;
+    --background-modifier-form-field: #0A0A0A;
+    --background-modifier-form-field-highlighted: #151515;
+    --background-modifier-box-shadow: rgba(0, 0, 0, 0.5);
+    --background-modifier-success: #8A7129;
+    --background-modifier-error: #5C0000;
+    --background-modifier-error-rgb: 92, 0, 0;
+    --background-modifier-error-hover: #7A0000;
+    --background-modifier-cover: rgba(0, 0, 0, 0.8);
+
+    /* ─────────────────────────────────────
+     T EXT                                                                      *
+     ───────────────────────────────────── */
+    --text-normal:       #E0E0E0;
+    --text-muted:        #888888;
+    --text-faint:        #555555;
+    --text-on-accent:    #000000;
+    --text-error:        #FF6B6B;
+    --text-error-hover:  #FF8A8A;
+    --text-accent:       #FFFFFF;
+    --text-accent-hover: #E0E0E0;
+
+    /* ─────────────────────────────────────
+     G OLD PALETTE                                                              *
+     Slightly adjusted for dark backgrounds
+     ───────────────────────────────────── */
+    --gold-highlight: #F0E9B5;
+    --gold-main:      #ffde6e;
+    --gold-shadow:    #8A7129;
+
+    /* ─────────────────────────────────────
+     I NTERACTIVE ELEMENTS                                                      *
+     ───────────────────────────────────── */
+    --interactive-accent:       var(--gold-main);
+    --interactive-accent-rgb:   255, 222, 110;
+    --interactive-accent-hover: var(--gold-highlight);
+
+    /* ─────────────────────────────────────
+     S ELECTION & HIGHLIGHTS                                                    *
+     ───────────────────────────────────── */
+    --text-selection:           rgba(255, 255, 255, 0.15);
+    --text-highlight-bg:        rgba(255, 222, 110, 0.25);
+    --text-highlight-bg-active: rgba(255, 222, 110, 0.4);
+
+    /* ─────────────────────────────────────
+     U I ELEMENTS                                                               *
+     ───────────────────────────────────── */
+    --scrollbar-bg:              #0A0A0A;
+    --scrollbar-thumb-bg:        #333333;
+    --scrollbar-active-thumb-bg: #555555;
+
+    --icon-color:          #888888;
+    --icon-color-hover:    #FFFFFF;
+    --icon-color-focused:  var(--gold-main);
+
+    --nav-item-color:             #888888;
+    --nav-item-color-hover:       #FFFFFF;
+    --nav-item-color-active:      var(--gold-main);
+    --nav-item-background-hover:  #111111;
+    --nav-item-background-active: #1A1A1A;
+
+    /* ─────────────────────────────────────
+     G RAPH VIEW                                                                *
+     ───────────────────────────────────── */
+    --graph-line:            #333333;
+    --graph-node:            #FFFFFF;
+    --graph-node-focused:    var(--gold-main);
+    --graph-node-tag:        var(--gold-main);
+    --graph-node-attachment: #888888;
+
+    /* ─────────────────────────────────────
+     T YPOGRAPHY                                                                *
+     Same as light mode - see comments there
+     ───────────────────────────────────── */
+    --font-text-theme:      "Wittgenstein", "Georgia", serif;
+    --font-heading-theme:   "Wittgenstein", "Georgia", serif;
+    --font-monospace-theme: "JetBrains Mono", "Fira Code", monospace;
+    --font-interface-theme: "Wittgenstein", system-ui, sans-serif;
+
+    --font-text-size:      18px;
+    --line-height:         1.7;
+    --font-heading-weight: 600;
+    --letter-spacing-headings: -0.02em;
+}
+
+
+/* ═══════════════════════════════════════════════════════════════════════════
+ 4 . TYPOGRAPHY                                                                 *
+ ═══════════════════════════════════════════════════════════════════════════ */
+
 body {
-	--radius-s: 0px;
-	--radius-m: 0px;
-	--radius-l: 0px;
-	--input-radius: 0px;
-	--tab-radius-active: 0px;
-	--checkbox-radius: 0px;
-	--toggle-radius: 0px;
-	--toggle-thumb-radius: 0px;
-	--slider-thumb-radius: 0px;
+    font-family: var(--font-text-theme);
+    font-size: var(--font-text-size);
+    line-height: var(--line-height);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
-.workspace-tab-header.is-active::before, .workspace-tab-header.is-active::after {
-	display: none;
+/* ─────────────────────────────────────
+ H EADINGS                                                                      *
+ ───────────────────────────────────── */
+.markdown-preview-view h1,
+.markdown-preview-view h2,
+.markdown-preview-view h3,
+.markdown-preview-view h4,
+.markdown-preview-view h5,
+.markdown-preview-view h6,
+.cm-header {
+    font-family: var(--font-heading-theme);
+    font-weight: var(--font-heading-weight);
+    letter-spacing: var(--letter-spacing-headings);
+    line-height: 1.3;
+    color: var(--text-accent);
 }
 
-svg * {
-	stroke-linecap: square;
-	stroke-linejoin: miter;
-	rx: 0;
-	ry: 0;
+.markdown-preview-view h1,
+.cm-header-1 {
+    font-size: 2.2em;
+    margin-top: 0;
 }
 
-.menu {
-	padding: var(--size-2-1);
+.markdown-preview-view h2,
+.cm-header-2 {
+    font-size: 1.8em;
 }
 
-.menu-item {
-	padding: var(--size-4-1) var(--size-4-2);
+.markdown-preview-view h3,
+.cm-header-3 {
+    font-size: 1.5em;
 }
 
-.menu-separator {
-	margin: var(--size-2-1) calc(var(--size-2-1) * -1);
+.markdown-preview-view h4,
+.cm-header-4 {
+    font-size: 1.25em;
 }
+
+.markdown-preview-view h5,
+.cm-header-5 {
+    font-size: 1.1em;
+}
+
+.markdown-preview-view h6,
+.cm-header-6 {
+    font-size: 1em;
+    font-weight: 700;
+}
+
+
+/* ═══════════════════════════════════════════════════════════════════════════
+ 5 . GOLD ELEMENTS ✨                                                            *
+
+ These elements use your gold accent color
+ ═══════════════════════════════════════════════════════════════════════════ */
+
+
+/* ─────────────────────────────────────
+ 5 .1 TAGS - Always Gold                                                        *
+ ───────────────────────────────────── */
+.tag,
+.cm-hashtag,
+a.tag,
+.cm-tag {
+    color: var(--gold-main) !important;
+    background-color: transparent !important;
+    font-family: var(--font-monospace-theme);
+    font-size: 0.9em;
+    padding: 0;
+    border: none;
+}
+
+.tag:hover,
+a.tag:hover,
+.cm-hashtag:hover {
+    color: var(--gold-highlight) !important;
+    text-decoration: none;
+}
+
+/* Tag in edit mode */
+.cm-s-obsidian span.cm-hashtag {
+    color: var(--gold-main) !important;
+}
+
+
+/* ─────────────────────────────────────
+ 5 .2 LINKS - Gold on Hover                                                     *
+ ───────────────────────────────────── */
+
+/* Internal links */
+.markdown-preview-view a.internal-link,
+.cm-hmd-internal-link {
+    color: var(--text-normal);
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 3px;
+    transition: color 0.15s ease, text-decoration-thickness 0.15s ease;
+}
+
+.markdown-preview-view a.internal-link:hover,
+.cm-hmd-internal-link:hover {
+    color: var(--gold-main);
+    text-decoration-thickness: 2px;
+}
+
+/* External links */
+.markdown-preview-view a.external-link,
+.cm-url,
+.cm-link {
+    color: var(--text-normal);
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 3px;
+    transition: color 0.15s ease;
+}
+
+.markdown-preview-view a.external-link:hover {
+    color: var(--gold-main);
+    text-decoration-thickness: 2px;
+}
+
+/* Unresolved links (links to non-existent notes) */
+.markdown-preview-view a.internal-link.is-unresolved {
+    color: var(--text-muted);
+    opacity: 0.7;
+}
+
+.markdown-preview-view a.internal-link.is-unresolved:hover {
+    color: var(--gold-shadow);
+}
+
+
+/* ─────────────────────────────────────
+ 5 .3 ACTIVE FILE & TAB - Gold                                                  *
+ ───────────────────────────────────── */
+
+/* Active file in sidebar */
+.nav-file-title.is-active,
+.nav-file-title.is-active .nav-file-title-content {
+    color: var(--gold-main) !important;
+    background-color: var(--nav-item-background-active);
+}
+
+/* Active tab in header */
+.workspace-tab-header.is-active {
+    border-bottom-color: var(--gold-main) !important;
+}
+
+.workspace-tab-header.is-active .workspace-tab-header-inner-title {
+    color: var(--gold-main) !important;
+}
+
+/* Tab active indicator line */
+.workspace-tab-header.is-active::after {
+    background-color: var(--gold-main) !important;
+}
+
+
+/* ─────────────────────────────────────
+ 5 .4 CHECKBOXES - Gold When Checked                                            *
+ ───────────────────────────────────── */
+
+/* Checkbox base */
+.task-list-item-checkbox,
+input[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 1.2em;
+    height: 1.2em;
+    border: 2px solid var(--text-muted);
+    border-radius: 3px;
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.15s ease;
+    position: relative;
+}
+
+/* Checkbox hover */
+.task-list-item-checkbox:hover,
+input[type="checkbox"]:hover {
+    border-color: var(--gold-main);
+}
+
+/* Checkbox checked - GOLD */
+.task-list-item-checkbox:checked,
+input[type="checkbox"]:checked {
+    background-color: var(--gold-main);
+    border-color: var(--gold-main);
+}
+
+/* Checkmark */
+.task-list-item-checkbox:checked::after,
+input[type="checkbox"]:checked::after {
+    content: '✓';
+    color: var(--background-primary);
+    font-size: 0.9em;
+    font-weight: bold;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Completed task text styling */
+.task-list-item[data-task="x"] .task-list-item-text,
+.task-list-item.is-checked .task-list-item-text {
+    color: var(--text-muted);
+    /* Uncomment below for strikethrough */
+    /* text-decoration: line-through; */
+}
+
+
+/* ─────────────────────────────────────
+ 5 .5 SEARCH HIGHLIGHTS - Gold                                                  *
+ ───────────────────────────────────── */
+
+/* Search match in content */
+.search-result-file-matched-text {
+    background-color: var(--text-highlight-bg);
+    color: inherit;
+}
+
+/* Search match highlight in editor */
+.cm-highlight,
+.markdown-preview-view mark,
+.search-highlight {
+    background-color: var(--text-highlight-bg) !important;
+    color: inherit;
+    padding: 1px 2px;
+    border-radius: 2px;
+}
+
+/* Active/current search match */
+.cm-highlight-active,
+.search-result-file-matched-text.is-active {
+    background-color: var(--text-highlight-bg-active) !important;
+}
+
+/* Search result file title */
+.search-result-file-title {
+    color: var(--text-accent);
+}
+
+.search-result-file-title:hover {
+    color: var(--gold-main);
+}
+
+
+/* ─────────────────────────────────────
+ 5 .6 GRAPH VIEW - Current Node Gold                                            *
+ ───────────────────────────────────── */
+
+.graph-view.color-fill-focused {
+    color: var(--gold-main) !important;
+}
+
+.graph-view.color-circle {
+    color: var(--graph-node);
+}
+
+.graph-view.color-line {
+    color: var(--graph-line);
+}
+
+.graph-view.color-fill-tag {
+    color: var(--gold-shadow);
+}
+
+.graph-view.color-fill-attachment {
+    color: var(--graph-node-attachment);
+}
+
+/* Hovered node */
+.graph-view.color-fill-hover {
+    color: var(--gold-highlight);
+}
+
+
+/* ─────────────────────────────────────
+ 5 .7 CURSOR / CARET - Gold                                                     *
+ ───────────────────────────────────── */
+
+.cm-cursor,
+.cm-cursor-primary,
+.cm-s-obsidian .cm-cursor {
+    border-left-color: var(--gold-main) !important;
+    border-left-width: 2px !important;
+}
+
+/* Secondary cursor (for multiple cursors) */
+.cm-cursor-secondary {
+    border-left-color: var(--gold-shadow) !important;
+}
+
+
+/* ─────────────────────────────────────
+ 5 .8 LIST BULLETS - Gold                                                       *
+ ───────────────────────────────────── */
+
+/* Unordered list bullets - Preview */
+.markdown-preview-view ul > li::marker {
+    color: var(--gold-main);
+}
+
+/* Nested bullets - different gold shades */
+.markdown-preview-view ul ul > li::marker {
+    color: var(--gold-shadow);
+}
+
+.markdown-preview-view ul ul ul > li::marker {
+    color: var(--gold-highlight);
+}
+
+/* Ordered list numbers */
+.markdown-preview-view ol > li::marker {
+    color: var(--gold-main);
+    font-family: var(--font-monospace-theme);
+    font-size: 0.9em;
+}
+
+/* Edit mode bullets */
+.cm-formatting-list {
+    color: var(--gold-main) !important;
+}
+
+
+/* ═══════════════════════════════════════════════════════════════════════════
+ 6 . MARKDOWN FORMATTING - Future Gold Options                                  *
+
+ Currently these stay B&W. Uncomment to make them gold.
+ ═══════════════════════════════════════════════════════════════════════════ */
+
+/* ─────────────────────────────────────
+ B OLD TEXT                                                                     *
+ Uncomment to make bold text gold
+ ───────────────────────────────────── */
+/*
+ . markdown-preview-view strong,                                                   *
+ .cm-strong {
+ color: var(--gold-main);
+ }
+ */
+
+/* ─────────────────────────────────────
+ I TALIC TEXT                                                                   *
+ Uncomment to make italic text gold
+ ───────────────────────────────────── */
+/*
+ . markdown-preview-view em,                                                       *
+ .cm-em {
+ color: var(--gold-main);
+ }
+ */
+
+/* ─────────────────────────────────────
+ B OLD + ITALIC                                                                 *
+ Uncomment to make bold-italic gold
+ ───────────────────────────────────── */
+/*
+ . markdown-preview-view strong em,                                                *
+ .markdown-preview-view em strong {
+ color: var(--gold-highlight);
+ }
+ */
+
+/* ─────────────────────────────────────
+ S TRIKETHROUGH                                                                 *
+ Uncomment for gold strikethrough
+ ───────────────────────────────────── */
+/*
+ . markdown-preview-view del,                                                      *
+ .cm-strikethrough {
+ color: var(--gold-shadow);
+ }
+ */
+
+/* ─────────────────────────────────────
+ I NLINE CODE                                                                   *
+ Uncomment for gold inline code
+ ───────────────────────────────────── */
+/*
+ . markdown-preview-view code,                                                     *
+ .cm-inline-code {
+ color: var(--gold-main);
+ background-color: var(--background-secondary);
+ }
+ */
+
+/* ─────────────────────────────────────
+ F OOTNOTES                                                                     *
+ Uncomment for gold footnotes
+ ───────────────────────────────────── */
+/*
+ . footnote-ref,                                                                   *
+ .footnote-backref {
+ color: var(--gold-main);
+ }
+ */
+
+/* ─────────────────────────────────────
+ H EADINGS (Individual)                                                         *
+ Uncomment to make specific headings gold
+ ───────────────────────────────────── */
+/*
+ . markdown-preview-view h1,                                                       *
+ .cm-header-1 {
+ color: var(--gold-main);
+ }
+ */
+
+/*
+ . markdown-preview-view h2,                                                       *
+ .cm-header-2 {
+ color: var(--gold-shadow);
+ }
+ */
+
+/* ─────────────────────────────────────
+ B LOCKQUOTE BORDER                                                             *
+ Uncomment for gold blockquote border
+ ───────────────────────────────────── */
+/*
+ . markdown-preview-view blockquote {                                              *
+ border-left-color: var(--gold-main);
+ }
+ */
+
+/* ─────────────────────────────────────
+ C ALLOUT BORDERS                                                               *
+ Uncomment for gold callout styling
+ ───────────────────────────────────── */
+/*
+ . callout {                                                                       *
+ border-left-color: var(--gold-main) !important;
+ }
+
+ .callout-title {
+ color: var(--gold-main);
+ }
+ */
+
+
+/* ═══════════════════════════════════════════════════════════════════════════
+ 7 . IMAGES                                                                     *
+
+ CURRENT: Pure B&W (grayscale filter)
+ ═══════════════════════════════════════════════════════════════════════════ */
+
+/* --- BASE: B&W Filter --- */
+.markdown-preview-view img,
+.cm-s-obsidian img,
+.view-content img,
+.markdown-source-view img,
+.image-embed img,
+img:not(.emoji) {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 16px 0;
+    filter: grayscale(100%);
+    transition: filter 0.3s ease;
+}
+
+/* --- HOVER: Reveal Color --- */
+.markdown-preview-view img:hover,
+.cm-s-obsidian img:hover,
+.view-content img:hover,
+.markdown-source-view img:hover,
+.image-embed img:hover,
+.image-embed:hover img,
+img:not(.emoji):hover {
+    filter: grayscale(0%) !important;
+}
+
+/* Embedded images in notes */
+.internal-embed.image-embed img {
+    filter: grayscale(100%);
+    transition: filter 0.3s ease;
+}
+
+.internal-embed.image-embed:hover img {
+    filter: grayscale(0%) !important;
+}
+
+/* TO DISABLE B&W: Comment out the filter line above, or replace with: */
+/* filter: none; */
+
+/* --- ALTERNATIVE OPTIONS --- */
+
+/* OPTION A: B&W with color on hover */
+/*
+ . markdown-preview-view img:hover,                                                *
+ .cm-s-obsidian img:hover {
+ filter: grayscale(0%);
+ }
+ */
+
+/* OPTION B: Always color (no filter) */
+/*
+ . markdown-preview-view img,                                                      *
+ .cm-s-obsidian img {
+ filter: none;
+ }
+ */
+
+/* OPTION C: Sepia tone */
+/*
+ . markdown-preview-view img,                                                      *
+ .cm-s-obsidian img {
+ filter: sepia(30%);
+ }
+ */
+
+/* OPTION D: High contrast B&W */
+/*
+ . markdown-preview-view img,                                                      *
+ .cm-s-obsidian img {
+ filter: grayscale(100%) contrast(1.2);
+ }
+ */
+
+/* OPTION E: Slight desaturation (muted colors) */
+/*
+ . markdown-preview-view img,                                                      *
+ .cm-s-obsidian img {
+ filter: saturate(0.5);
+ }
+ */
+
+
+/* ═══════════════════════════════════════════════════════════════════════════
+ 8 . HORIZONTAL RULES                                                           *
+
+ CURRENT: Dotted pointillism style
+ ═══════════════════════════════════════════════════════════════════════════ */
+
+/* --- CURRENT: Pointillism Dots --- */
+.markdown-preview-view hr {
+    border: none;
+    height: 3px;
+    margin: 32px 0;
+    background: repeating-linear-gradient(
+        90deg,
+        var(--text-normal) 0px,
+                                          var(--text-normal) 3px,
+                                          transparent 3px,
+                                          transparent 12px
+    );
+}
+
+/* --- ALTERNATIVE OPTIONS --- */
+
+/* OPTION A: Solid thin line */
+/*
+ . markdown-preview-view hr {                                                      *
+ border: none;
+ height: 1px;
+ margin: 32px 0;
+ background-color: var(--background-modifier-border);
+ }
+ */
+
+/* OPTION B: Gold dotted line */
+/*
+ . markdown-preview-view hr {                                                      *
+ border: none;
+ height: 3px;
+ margin: 32px 0;
+ background: repeating-linear-gradient(
+     90deg,
+var(--gold-main) 0px,
+var(--gold-main) 3px,
+transparent 3px,
+transparent 12px
+);
+}
+*/
+
+/* OPTION C: Three centered dots */
+/*
+ . markdown-preview-view hr {                                                      *
+ border: none;
+ height: auto;
+ margin: 32px 0;
+ text-align: center;
+ background: transparent;
+ }
+ .markdown-preview-view hr::after {
+ content: '· · ·';
+ color: var(--text-muted);
+ letter-spacing: 8px;
+ font-size: 1.2em;
+ }
+ */
+
+/* OPTION D: Faded gradient line */
+/*
+ . markdown-preview-view hr {                                                      *
+ border: none;
+ height: 1px;
+ margin: 32px 0;
+ background: linear-gradient(
+     90deg,
+transparent 0%,
+var(--text-muted) 20%,
+var(--text-muted) 80%,
+transparent 100%
+);
+}
+*/
+
+/* OPTION E: Gold gradient fade */
+/*
+ . markdown-preview-view hr {                                                      *
+ border: none;
+ height: 2px;
+ margin: 32px 0;
+ background: linear-gradient(
+     90deg,
+transparent 0%,
+var(--gold-shadow) 20%,
+var(--gold-main) 50%,
+var(--gold-shadow) 80%,
+transparent 100%
+);
+}
+*/
+
+
+/* ═══════════════════════════════════════════════════════════════════════════
+ 9 . CODE BLOCKS                                                                *
+ ═══════════════════════════════════════════════════════════════════════════ */
+
+/* Inline code */
+.markdown-preview-view code,
+.cm-inline-code {
+    font-family: var(--font-monospace-theme);
+    font-size: 0.9em;
+    background-color: var(--background-secondary);
+    color: var(--text-normal);
+    padding: 2px 6px;
+    border-radius: 3px;
+}
+
+/* Code blocks */
+.markdown-preview-view pre,
+.cm-s-obsidian .HyperMD-codeblock {
+    font-family: var(--font-monospace-theme);
+    background-color: var(--background-secondary);
+    border: 1px solid var(--background-modifier-border);
+    padding: 16px;
+    border-radius: 4px;
+    overflow-x: auto;
+    line-height: 1.5;
+}
+
+.markdown-preview-view pre code {
+    background: transparent;
+    padding: 0;
+    border-radius: 0;
+}
+
+/* Code block language label */
+.markdown-preview-view pre[class*="language-"]::before {
+    color: var(--text-muted);
+    font-size: 0.8em;
+}
+
+
+/* ═══════════════════════════════════════════════════════════════════════════
+ 1 0. BLOCKQUOTES                                                               *
+ ═══════════════════════════════════════════════════════════════════════════ */
+
+.markdown-preview-view blockquote,
+.cm-quote {
+    border-left: 3px solid var(--text-muted);
+    padding-left: 16px;
+    margin: 16px 0;
+    color: var(--text-muted);
+    font-style: italic;
+}
+
+/* Nested blockquotes */
+.markdown-preview-view blockquote blockquote {
+    border-left-color: var(--text-faint);
+}
+
+
+/* ═══════════════════════════════════════════════════════════════════════════
+ 1 1. TABLES                                                                    *
+ ═══════════════════════════════════════════════════════════════════════════ */
+
+.markdown-preview-view table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 16px 0;
+}
+
+.markdown-preview-view th {
+    font-weight: 600;
+    color: var(--text-accent);
+    border-bottom: 2px solid var(--text-normal);
+    padding: 8px 16px;
+    text-align: left;
+}
+
+.markdown-preview-view td {
+    padding: 8px 16px;
+    border-bottom: 1px solid var(--background-modifier-border);
+}
+
+.markdown-preview-view tr:hover {
+    background-color: var(--background-secondary);
+}
+
+/* --- ALTERNATIVE: Gold table headers --- */
+/*
+ . markdown-preview-view th {                                                      *
+ color: var(--gold-main);
+ border-bottom-color: var(--gold-main);
+ }
+ */
+
+
+/* ═══════════════════════════════════════════════════════════════════════════
+ 1 2. SCROLLBARS                                                                *
+
+ CURRENT: Thin, minimal
+ ═══════════════════════════════════════════════════════════════════════════ */
+
+/* --- CURRENT: Thin, minimal scrollbars --- */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--scrollbar-bg);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--scrollbar-thumb-bg);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--scrollbar-active-thumb-bg);
+}
+
+/* --- ALTERNATIVE OPTIONS --- */
+
+/* OPTION A: Hidden until hover */
+/*
+ : :-webkit-scrollbar {                                                            *
+ width: 8px;
+ height: 8px;
+ }
+ ::-webkit-scrollbar-thumb {
+ background: transparent;
+ border-radius: 4px;
+ transition: background 0.2s ease;
+ }
+ *:hover::-webkit-scrollbar-thumb {
+ background: var(--scrollbar-thumb-bg);
+ }
+ */
+
+/* OPTION B: Extra thin */
+/*
+ : :-webkit-scrollbar {                                                            *
+ width: 4px;
+ height: 4px;
+ }
+ */
+
+/* OPTION C: Gold scrollbar thumb */
+/*
+ : :-webkit-scrollbar-thumb {                                                      *
+ background: var(--gold-shadow);
+ }
+ ::-webkit-scrollbar-thumb:hover {
+ background: var(--gold-main);
+ }
+ */
+
+/* OPTION D: No scrollbar (use with caution) */
+/*
+ : :-webkit-scrollbar {                                                            *
+ display: none;
+ }
+ */
+
+
+/* ═══════════════════════════════════════════════════════════════════════════
+ 1 3. SPACING                                                                   *
+
+ CURRENT: Default Obsidian spacing
+ Uncomment sections to adjust
+ ═══════════════════════════════════════════════════════════════════════════ */
+
+/* --- DEFAULT: No overrides, uses Obsidian defaults --- */
+
+/* --- OPTION A: More spacious --- */
+/*
+ . markdown-preview-view {                                                         *
+ padding: 40px 60px;
+ }
+
+ .markdown-preview-view p {
+ margin-bottom: 1.5em;
+ }
+
+ .markdown-preview-view h1,
+.markdown-preview-view h2,
+.markdown-preview-view h3,
+.markdown-preview-view h4,
+.markdown-preview-view h5,
+.markdown-preview-view h6 {
+margin-top: 2em;
+margin-bottom: 1em;
+}
+*/
+
+/* --- OPTION B: More compact --- */
+/*
+ . markdown-preview-view {                                                         *
+ padding: 20px 30px;
+ }
+
+ .markdown-preview-view p {
+ margin-bottom: 0.8em;
+ }
+
+ .markdown-preview-view h1,
+.markdown-preview-view h2,
+.markdown-preview-view h3,
+.markdown-preview-view h4,
+.markdown-preview-view h5,
+.markdown-preview-view h6 {
+margin-top: 1.2em;
+margin-bottom: 0.5em;
+}
+*/
+
+/* --- OPTION C: Wide content area --- */
+/*
+ . markdown-preview-view,                                                          *
+ .cm-s-obsidian {
+ max-width: 900px;
+ margin: 0 auto;
+ }
+ */
+
+
+/* ═══════════════════════════════════════════════════════════════════════════
+ 1 4. UI ELEMENTS                                                               *
+ ═══════════════════════════════════════════════════════════════════════════ */
+
+/* ─────────────────────────────────────
+ F ILE EXPLORER / SIDEBAR                                                       *
+ ───────────────────────────────────── */
+.nav-file-title,
+.nav-folder-title {
+    color: var(--nav-item-color);
+    font-family: var(--font-interface-theme);
+    font-size: 0.9em;
+}
+
+.nav-file-title:hover,
+.nav-folder-title:hover {
+    color: var(--nav-item-color-hover);
+    background-color: var(--nav-item-background-hover);
+}
+
+/* Folder collapse arrow */
+.nav-folder-collapse-indicator {
+    color: var(--text-muted);
+}
+
+/* ─────────────────────────────────────
+ T AB HEADERS                                                                   *
+ ───────────────────────────────────── */
+.workspace-tab-header-inner-title {
+    font-family: var(--font-interface-theme);
+    font-size: 0.9em;
+}
+
+/* ─────────────────────────────────────
+ M ODALS / DIALOGS                                                              *
+ ───────────────────────────────────── */
+.modal-container .modal {
+    background-color: var(--background-primary);
+    border: 1px solid var(--background-modifier-border);
+}
+
+/* ─────────────────────────────────────
+ B UTTONS                                                                       *
+ ───────────────────────────────────── */
+button.mod-cta {
+    background-color: var(--gold-main);
+    color: var(--text-on-accent);
+}
+
+button.mod-cta:hover {
+    background-color: var(--gold-highlight);
+}
+
+/* ─────────────────────────────────────
+ S ELECTION                                                                     *
+ ───────────────────────────────────── */
+::selection {
+    background-color: var(--text-selection);
+}
+
+.cm-selectionBackground,
+.cm-selected {
+    background-color: var(--text-selection) !important;
+}
+
+body.is-focused .sidebar-toggle-button,
+body.is-focused .workspace-tabs.mod-top {
+    --tab-container-background: var(--background-primary);
+}
+
+body.is-focused .titlebar,
+body.is-focused .workspace-ribbon.mod-left {
+    --titlebar-background: var(--background-primary);
+}
+
+.is-hidden-frameless:not(.is-fullscreen).is-focused .titlebar-button-container.mod-right {
+    background-color: var(--background-primary);
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+ E ND OF THEME                                                                  *
+
+ To customize further:
+ 1. Find the section you want to change
+ 2. Uncomment alternative options, or
+ 3. Modify values directly
+ 4. Save and refresh Obsidian (Cmd/Ctrl + R)
+
+ ═══════════════════════════════════════════════════════════════════════════ */
