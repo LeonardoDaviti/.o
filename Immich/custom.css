@@ -1,0 +1,30 @@
+/* ═══════════════════════════════════════════════════════════════════════════
+ * SHINKAWA THEME FOR IMMICH
+ * B&W Images with Color on Hover (Per Image)
+ * ═══════════════════════════════════════════════════════════════════════════ */
+
+/* Immich Color Variables - Gold & B&W Theme */
+:root {
+    --immich-dark-primary: 255 222 110 !important;
+    --immich-dark-bg: 10 10 10 !important;
+    --immich-dark-fg: 224 224 224 !important;
+    --immich-dark-gray: 26 26 26 !important;
+}
+
+/* All thumbnail images - B&W by default */
+img[src*="/api/assets/"][src*="/thumbnail"] {
+    filter:  grayscale(100%) !important;
+    transition: filter 0.3s ease !important;
+}
+
+/* Direct hover on the image itself */
+img[src*="/api/assets/"][src*="/thumbnail"]:hover {
+    filter: grayscale(0%) !important;
+}
+
+/* Exclude UI elements */
+nav img,
+img[alt*="logo" i],
+img[alt*="immich" i] {
+    filter:  none !important;
+}
